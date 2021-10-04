@@ -8,7 +8,7 @@ MNE: a basic example of parsing FIF files of EEG data is in <a href="https://git
 
 <br><br>
 <HR>
-An EEG data file represented through javascript, see eeg.html 
+An EEG data file represented through javascript, see <a href="https://github.com/autonomous019/EEG-Processing/blob/main/eeg.html">eeg.html</a> 
  
 <img src="https://github.com/autonomous019/EEG-Processing/blob/main/eeg%20ui%20example.png?raw=true" align="center">
 
