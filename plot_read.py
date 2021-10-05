@@ -105,7 +105,7 @@ evoked_diff = mne.combine_evoked([aud_evoked, vis_evoked], weights=[1, -1])
 evoked_diff.pick_types(meg='mag').plot_topo(color='r', legend=False)
 
 
-'''
+'''  INVERSE OPERATOR NOTES
 
 source space- A source space (abbr. src) specifies where in the brain one wants to estimate the source amplitudes. 
 It corresponds to locations of a set of candidate equivalent current dipoles. MNE mostly works with 
@@ -122,6 +122,16 @@ Because this “inverse problem” is underdetermined (there is no unique soluti
 by providing a regularization parameter specifying the relative smoothness of the current estimates in terms of a 
 signal-to-noise ratio (where “noise” here is akin to baseline activity level across all of cortex).
 
+Planck time = 5.4 x 10 -44 second
+
+X-ray energy from the laser blasted a single photon - a particle of light - to knock two electrons out of a hydrogen molecule. (Hydrogen is an element which is part of water and the air we breathe, and has two protons and two electrons.)
+smallest measurable time is zeptosecond from above. 0.000000000000000000001 10X-20s
+
+X-rays are a form of invisible, high frequency electromagnetic radiation with
+wavelenght between 10 and 0.01 nanometres (Casimir Length), corresponding to a frequency
+of 30 PHz to 3 E Hz. 
+
+
 '''
 
 # load inverse operator
@@ -137,10 +147,9 @@ stc = mne.minimum_norm.apply_inverse(vis_evoked, inv_operator,
                                      method='MNE')  # or dSPM, sLORETA, eLORETA
 
 # path to subjects' MRI files
-subjects_dir = os.path.join(sample_data_folder, 'subjects')
+#subjects_dir = os.path.join(sample_data_folder, 'subjects')
 # plot the STC
-stc.plot(initial_time=0.1, hemi='split', views=['lat', 'med'],
-         subjects_dir=subjects_dir)
+#stc.plot(initial_time=0.1, hemi='split', views=['lat', 'med'], subjects_dir=subjects_dir)
 
 
 
